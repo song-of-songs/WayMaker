@@ -17,6 +17,7 @@ if (process.env.NODE_ENV === 'production') {
 //设置请求头（如果请求头统一的话可以在axios文件设置，则无须从这里传过去）
 const header = {
   Accept: 'application/json;charset=UTF-8;multipart/form-data',
+  'Content-Type': 'application/x-www-form-urlencoded;application/octet-stream'
 }
  
 //根据自身需求
@@ -27,9 +28,14 @@ let wayMakerService={
     },
     uploadOneFile(data) {
       // const url = " http://localhost:8082";
-      const url = " http://192.168.1.9:8082";
+      const url = " http://192.168.1.10:8082";
       return service.post(url, data, header);
-  }
+    },
+    upload(path,data,header) {
+      // const url = " http://localhost:8082";
+      const url = " http://192.168.1.10:8082";
+      return service.post(url+path, data, header);
+    }
 }
  
  
