@@ -32,8 +32,8 @@ let wayMakerService={
       return service.post(url, data, header);
     },
     upload(path,data,header) {
-      // const url = " http://localhost:8082";
-      const url = " http://192.168.1.10:8082";
+      const url = " http://localhost:8082";
+      // const url = " http://192.168.1.10:8082";
       return service.post(url+path, data, header);
     }
 }
