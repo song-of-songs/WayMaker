@@ -62,7 +62,7 @@ export default {
       this.$service.upload("/", formData, {
               "Content-Type": "multipart/form-data"
           }).then(result => {
-          console.log(result.data)
+          console.log(result)
       });
     }
   }
